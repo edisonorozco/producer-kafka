@@ -1,0 +1,50 @@
+{
+  "clientID": 1007,
+  "clientName": "Restaurante Mary S.A",
+  "documentNumber": 1152437161,
+  "documentType": "NIT",
+  "customerSegment": "Pyme y empresas",
+  "commercialName": "Commercial 3",
+  "dateOfEvaluation": "01/jan/22",
+  "evaluationFromDate": "01/Dec/21",
+  "evaluationToDate": "31/Dec/21",
+  "agreements": [
+	{
+		"agreementId": 129,
+		"services": [
+			{
+				"serviceName": "Recaudo Electronico",
+				"numberDefaults": 1,
+				"agreedTransitions": 150,
+				"complianceTransitions": [
+					{
+						"fromDate": "01/Dec/21",
+						"toDate": "31/Dec/21",
+						"actualValue": 100,
+						"complianceStatus": "not met"
+					}
+				],
+				"averageBalance": 10000000,
+				"complianceAverageBalance": [
+					{
+						"fromDate": "01/Dec/21",
+						"toDate": "31/Dec/21",
+						"actualValue": 9000000,
+						"complianceStatus": "not met"
+					}
+				]
+			}
+		]
+	}
+  ],
+  "crossSellingProducts": [
+    {
+      "productName": "Factoring",
+      "tenure": "true"
+    },
+    {
+      "productName": "Cartera",
+      "tenure": "true"
+    }
+  ]
+}

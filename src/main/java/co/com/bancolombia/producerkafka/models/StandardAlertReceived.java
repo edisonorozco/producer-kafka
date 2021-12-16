@@ -1,38 +1,24 @@
 package co.com.bancolombia.producerkafka.models;
 
 public class StandardAlertReceived {
-    private Integer documentNumber;
-    private int documentType;
-    private Integer mdmKey;
+    private Integer clientID;
     private String clientName;
+    private Integer documentNumber;
+    private String documentType;
+    private String customerSegment;
     private String commercialName;
-    private String zoneManagerName;
-    private String segment;
-    private Service[] services;
+    private String dateOfEvaluation;
+    private String evaluationToDate;
+    private String evaluationFromDate;
+    private Agreement[] agreements;
     private CrossSellingProduct[] crossSellingProducts;
 
-    public Integer getDocumentNumber() {
-        return documentNumber;
+    public Integer getClientID() {
+        return clientID;
     }
 
-    public void setDocumentNumber(Integer documentNumber) {
-        this.documentNumber = documentNumber;
-    }
-
-    public int getDocumentType() {
-        return documentType;
-    }
-
-    public void setDocumentType(int documentType) {
-        this.documentType = documentType;
-    }
-
-    public Integer getMdmKey() {
-        return mdmKey;
-    }
-
-    public void setMdmKey(Integer mdmKey) {
-        this.mdmKey = mdmKey;
+    public void setClientID(Integer clientID) {
+        this.clientID = clientID;
     }
 
     public String getClientName() {
@@ -43,6 +29,30 @@ public class StandardAlertReceived {
         this.clientName = clientName;
     }
 
+    public Integer getDocumentNumber() {
+        return documentNumber;
+    }
+
+    public void setDocumentNumber(Integer documentNumber) {
+        this.documentNumber = documentNumber;
+    }
+
+    public String getDocumentType() {
+        return documentType;
+    }
+
+    public void setDocumentType(String documentType) {
+        this.documentType = documentType;
+    }
+
+    public String getCustomerSegment() {
+        return customerSegment;
+    }
+
+    public void setCustomerSegment(String customerSegment) {
+        this.customerSegment = customerSegment;
+    }
+
     public String getCommercialName() {
         return commercialName;
     }
@@ -51,28 +61,36 @@ public class StandardAlertReceived {
         this.commercialName = commercialName;
     }
 
-    public String getZoneManagerName() {
-        return zoneManagerName;
+    public String getDateOfEvaluation() {
+        return dateOfEvaluation;
     }
 
-    public void setZoneManagerName(String zoneManagerName) {
-        this.zoneManagerName = zoneManagerName;
+    public void setDateOfEvaluation(String dateOfEvaluation) {
+        this.dateOfEvaluation = dateOfEvaluation;
     }
 
-    public String getSegment() {
-        return segment;
+    public String getEvaluationToDate() {
+        return evaluationToDate;
     }
 
-    public void setSegment(String segment) {
-        this.segment = segment;
+    public void setEvaluationToDate(String evaluationToDate) {
+        this.evaluationToDate = evaluationToDate;
     }
 
-    public Service[] getServices() {
-        return services;
+    public String getEvaluationFromDate() {
+        return evaluationFromDate;
     }
 
-    public void setServices(Service[] services) {
-        this.services = services;
+    public void setEvaluationFromDate(String evaluationFromDate) {
+        this.evaluationFromDate = evaluationFromDate;
+    }
+
+    public Agreement[] getAgreements() {
+        return agreements;
+    }
+
+    public void setAgreements(Agreement[] agreements) {
+        this.agreements = agreements;
     }
 
     public CrossSellingProduct[] getCrossSellingProducts() {

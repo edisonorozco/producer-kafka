@@ -1,28 +1,14 @@
 package co.com.bancolombia.producerkafka.models;
 
+import java.math.BigDecimal;
+
 public class Service {
-    private int numberDefaults;
     private String serviceName;
-    private String agreement;
-    private String tradingStartDate;
-    private String monitoringStartDate;
-    private String monitoringEndDate;
-    private Integer agreedFeeTransaction;
+    private int numberDefaults;
     private Integer agreedTransitions;
-    private int[] transitions;
-    private double agreedBalance;
-    private double[] balances;
-    private double newRate;
-    private String applicationDate;
-    private String reason;
-
-    public int getNumberDefaults() {
-        return numberDefaults;
-    }
-
-    public void setNumberDefaults(int numberDefaults) {
-        this.numberDefaults = numberDefaults;
-    }
+    private Compliance[] complianceTransitions;
+    private BigDecimal averageBalance;
+    private Compliance[] complianceAverageBalance;
 
     public String getServiceName() {
         return serviceName;
@@ -32,44 +18,12 @@ public class Service {
         this.serviceName = serviceName;
     }
 
-    public String getAgreement() {
-        return agreement;
+    public int getNumberDefaults() {
+        return numberDefaults;
     }
 
-    public void setAgreement(String agreement) {
-        this.agreement = agreement;
-    }
-
-    public String getTradingStartDate() {
-        return tradingStartDate;
-    }
-
-    public void setTradingStartDate(String tradingStartDate) {
-        this.tradingStartDate = tradingStartDate;
-    }
-
-    public String getMonitoringStartDate() {
-        return monitoringStartDate;
-    }
-
-    public void setMonitoringStartDate(String monitoringStartDate) {
-        this.monitoringStartDate = monitoringStartDate;
-    }
-
-    public String getMonitoringEndDate() {
-        return monitoringEndDate;
-    }
-
-    public void setMonitoringEndDate(String monitoringEndDate) {
-        this.monitoringEndDate = monitoringEndDate;
-    }
-
-    public Integer getAgreedFeeTransaction() {
-        return agreedFeeTransaction;
-    }
-
-    public void setAgreedFeeTransaction(Integer agreedFeeTransaction) {
-        this.agreedFeeTransaction = agreedFeeTransaction;
+    public void setNumberDefaults(int numberDefaults) {
+        this.numberDefaults = numberDefaults;
     }
 
     public Integer getAgreedTransitions() {
@@ -80,51 +34,27 @@ public class Service {
         this.agreedTransitions = agreedTransitions;
     }
 
-    public int[] getTransitions() {
-        return transitions;
+    public Compliance[] getComplianceTransitions() {
+        return complianceTransitions;
     }
 
-    public void setTransitions(int[] transitions) {
-        this.transitions = transitions;
+    public void setComplianceTransitions(Compliance[] complianceTransitions) {
+        this.complianceTransitions = complianceTransitions;
     }
 
-    public double getAgreedBalance() {
-        return agreedBalance;
+    public BigDecimal getAverageBalance() {
+        return averageBalance;
     }
 
-    public void setAgreedBalance(double agreedBalance) {
-        this.agreedBalance = agreedBalance;
+    public void setAverageBalance(BigDecimal averageBalance) {
+        this.averageBalance = averageBalance;
     }
 
-    public double[] getBalances() {
-        return balances;
+    public Compliance[] getComplianceAverageBalance() {
+        return complianceAverageBalance;
     }
 
-    public void setBalances(double[] balances) {
-        this.balances = balances;
-    }
-
-    public double getNewRate() {
-        return newRate;
-    }
-
-    public void setNewRate(double newRate) {
-        this.newRate = newRate;
-    }
-
-    public String getApplicationDate() {
-        return applicationDate;
-    }
-
-    public void setApplicationDate(String applicationDate) {
-        this.applicationDate = applicationDate;
-    }
-
-    public String getReason() {
-        return reason;
-    }
-
-    public void setReason(String reason) {
-        this.reason = reason;
+    public void setComplianceAverageBalance(Compliance[] complianceAverageBalance) {
+        this.complianceAverageBalance = complianceAverageBalance;
     }
 }

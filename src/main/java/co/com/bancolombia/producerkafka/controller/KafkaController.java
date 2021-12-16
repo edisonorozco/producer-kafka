@@ -1,11 +1,17 @@
 package co.com.bancolombia.producerkafka.controller;
 
+import co.com.bancolombia.producerkafka.models.StandardAlertReceived;
 import co.com.bancolombia.producerkafka.services.KafkaProducer;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.reactive.ReactiveKafkaProducerTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Objects;
 
 @RestController()
 public class KafkaController {
@@ -17,15 +23,17 @@ public class KafkaController {
     private String kafkaTopic;
 
     @GetMapping("/send")
-    public String startSendMessage() throws InterruptedException {
+    public String startSendMessage() throws InterruptedException, IOException {
 
-        String json = "{\"documentNumber\":10455621,\"documentType\":1,\"mdmKey\":10458,\"clientName\":\"Flores S.A.S\",\"commercialName\":\"Commercial 1\",\"zoneManagerName\":\"Zone manager 1\",\"segment\":\"Pyme\",\"services\":[{\"numberDefaults\":2,\"serviceName\":\"Recaudo PSE\",\"agreement\":\"122\",\"tradingStartDate\":\"19/10/2021\",\"monitoringStartDate\":\"19/10/2021\",\"monitoringEndDate\":\"31/10/2021\",\"agreedFeeTransaction\":800,\"agreedTransitions\":100,\"transitions\":[100,30,10],\"agreedBalance\":1000000.0,\"balances\":[45024.0,45414.0,45411.0],\"newRate\":4545.0,\"applicationDate\":\"19/10/2021\",\"reason\":\"xxxxxx\"},{\"numberDefaults\":2,\"serviceName\":\"Recaudo Electronico\",\"agreement\":\"123\",\"tradingStartDate\":\"31/10/2021\",\"monitoringStartDate\":\"30/11/2021\",\"monitoringEndDate\":\"30/11/2021\",\"agreedFeeTransaction\":800,\"agreedTransitions\":100,\"transitions\":[100,30,10],\"agreedBalance\":1000000.0,\"balances\":[45024.0,45414.0,45411.0],\"newRate\":4545.0,\"applicationDate\":\"19/10/2021\",\"reason\":\"xxxxxx\"}],\"crossSellingProducts\":[{\"productName\":\"Factoring\",\"tenure\":true},{\"productName\":\"Cartera\",\"tenure\":true}]}";
+        final File folder = new File(ClassLoader.getSystemResource("alertstest").getFile());
+        File[] fileList = Objects.requireNonNull(folder.listFiles());
 
         KafkaProducer kafkaProducer = new KafkaProducer(reactiveKafkaProducerTemplate);
 
-        for (int i = 0; i <= 10; i++) {
+        for (File file : fileList) {
             Thread.sleep(1000L);
-            kafkaProducer.send(kafkaTopic, json);
+            StandardAlertReceived standardAlertReceived = new ObjectMapper().readValue(file, StandardAlertReceived.class);
+            kafkaProducer.send(kafkaTopic, new ObjectMapper().writeValueAsString(standardAlertReceived));
         }
 
         return "Se inicio envio de mensajes";

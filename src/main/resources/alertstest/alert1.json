@@ -1,0 +1,84 @@
+{
+  "clientID": 1001,
+  "clientName": "Flores el carmen S.A.S",
+  "documentNumber": 1152437155,
+  "documentType": "NIT",
+  "customerSegment": "Pyme y empresas",
+  "commercialName": "Commercial 1",
+  "dateOfEvaluation": "01/jan/22",
+  "evaluationFromDate": "01/Nov/21",
+  "evaluationToDate": "31/Dec/21",
+  "agreements": [
+	{
+		"agreementId": 123,
+		"services": [
+			{
+				"serviceName": "Recaudo Electronico",
+				"numberDefaults": 2,
+				"agreedTransitions": 100,
+				"complianceTransitions": [
+					{
+						"fromDate": "01/Nov/21",
+						"toDate": "30/Nov/21",
+						"actualValue": 5,
+						"complianceStatus": "not met"
+					},
+					{
+						"fromDate": "01/Dec/21",
+						"toDate": "31/Dec/21",
+						"actualValue": 15,
+						"complianceStatus": "not met"
+					}
+				],
+				"averageBalance": 10000000,
+				"complianceAverageBalance": [
+					{
+						"fromDate": "01/Nov/21",
+						"toDate": "30/Nov/21",
+						"actualValue": 5000000,
+						"complianceStatus": "not met"
+					},
+					{
+						"fromDate": "01/Dec/21",
+						"toDate": "31/Dec/21",
+						"actualValue": 9000000,
+						"complianceStatus": "not met"
+					}
+				]
+			},
+			{
+				"serviceName": "Recaudo corresponsal bancario",
+				"agreedTransitions": 100,
+				"numberDefaults": 1,
+				"complianceTransitions": [
+					{
+						"fromDate": "01/Nov/21",
+						"toDate": "30/Nov/21",
+						"complianceStatus": "not met",
+						"actualValue": 5
+					}
+				],
+				"averageBalance": 10000000,
+				"complianceAverageBalance": [
+					{
+						"fromDate": "01/Nov/21",
+						"toDate": "30/Nov/21",
+						"actualValue": 5000000,
+						"complianceStatus": "not met"
+					}
+				]
+			}
+		]
+	}
+  ],
+  "crossSellingProducts": [
+    {
+      "productName": "Factoring",
+      "tenure": "true"
+    },
+    {
+      "productName": "Cartera",
+      "tenure": "true"
+    }
+  ]
+}
