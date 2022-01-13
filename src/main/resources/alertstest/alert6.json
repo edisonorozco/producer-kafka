@@ -93,7 +93,7 @@
 					{
 						"serviceName": "RecaudoCorresponsalBancario",
 						"numNonCompliance": "2",
-						"NumOfTransaction": {
+						"numOfTransaction": {
 							"value": "100",
 							"compliance": [
 								{
@@ -128,7 +128,7 @@
 								}
 							]
 						},
-						"AverageBalance": {
+						"averageBalance": {
 							"value": "1000000",
 							"compliance": [
 								{
@@ -167,7 +167,7 @@
 					{
 						"serviceName": "RecaudoPSE",
 						"numNonCompliance": "2",
-						"NumOfTransaction": {
+						"numOfTransaction": {
 							"value": "200",
 							"compliance": [
 								{
@@ -202,7 +202,7 @@
 								}
 							]
 						},
-						"AverageBalance": {
+						"averageBalance": {
 							"value": "1000000",
 							"compliance": [
 								{
@@ -246,7 +246,7 @@
 					{
 						"serviceName": "RecaudoCorresponsalBancario",
 						"numNonCompliance": "2",
-						"NumOfTransaction": {
+						"numOfTransaction": {
 							"value": "500",
 							"compliance": [
 								{
@@ -281,7 +281,7 @@
 								}
 							]
 						},
-						"AverageBalance": {
+						"averageBalance": {
 							"value": "1000000",
 							"compliance": [
 								{
@@ -320,7 +320,7 @@
 					{
 						"serviceName": "RecaudoPSE",
 						"numNonCompliance": "2",
-						"NumOfTransaction": {
+						"numOfTransaction": {
 							"value": "1000",
 							"compliance": [
 								{
@@ -355,7 +355,7 @@
 								}
 							]
 						},
-						"AverageBalance": {
+						"averageBalance": {
 							"value": "1000000",
 							"compliance": [
 								{
