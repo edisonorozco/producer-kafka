@@ -1,14 +1,14 @@
 package co.com.bancolombia.producerkafka.models;
 
-import java.math.BigDecimal;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Service {
     private String serviceName;
-    private int numberDefaults;
-    private Integer agreedTransitions;
-    private Compliance[] complianceTransitions;
-    private BigDecimal averageBalance;
-    private Compliance[] complianceAverageBalance;
+    private int numNonCompliance;
+    @JsonProperty("NumOfTransaction")
+    private NumOfTransaction numOfTransaction;
+    @JsonProperty("AverageBalance")
+    private AverageBalance averageBalance;
 
     public String getServiceName() {
         return serviceName;
@@ -18,43 +18,27 @@ public class Service {
         this.serviceName = serviceName;
     }
 
-    public int getNumberDefaults() {
-        return numberDefaults;
+    public int getNumNonCompliance() {
+        return numNonCompliance;
     }
 
-    public void setNumberDefaults(int numberDefaults) {
-        this.numberDefaults = numberDefaults;
+    public void setNumNonCompliance(int numNonCompliance) {
+        this.numNonCompliance = numNonCompliance;
     }
 
-    public Integer getAgreedTransitions() {
-        return agreedTransitions;
+    public NumOfTransaction getNumOfTransaction() {
+        return numOfTransaction;
     }
 
-    public void setAgreedTransitions(Integer agreedTransitions) {
-        this.agreedTransitions = agreedTransitions;
+    public void setNumOfTransaction(NumOfTransaction numOfTransaction) {
+        this.numOfTransaction = numOfTransaction;
     }
 
-    public Compliance[] getComplianceTransitions() {
-        return complianceTransitions;
-    }
-
-    public void setComplianceTransitions(Compliance[] complianceTransitions) {
-        this.complianceTransitions = complianceTransitions;
-    }
-
-    public BigDecimal getAverageBalance() {
+    public AverageBalance getAverageBalance() {
         return averageBalance;
     }
 
-    public void setAverageBalance(BigDecimal averageBalance) {
+    public void setAverageBalance(AverageBalance averageBalance) {
         this.averageBalance = averageBalance;
-    }
-
-    public Compliance[] getComplianceAverageBalance() {
-        return complianceAverageBalance;
-    }
-
-    public void setComplianceAverageBalance(Compliance[] complianceAverageBalance) {
-        this.complianceAverageBalance = complianceAverageBalance;
     }
 }

@@ -1,22 +1,31 @@
 package co.com.bancolombia.producerkafka.models;
 
-public class CrossSellingProduct {
-    private String productName;
-    private boolean tenure;
+public class SegmentLevel {
+    private String segmentName;
+    private String value;
+    private  Compliance[] compliance;
 
-    public String getProductName() {
-        return productName;
+    public String getSegmentName() {
+        return segmentName;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void setSegmentName(String segmentName) {
+        this.segmentName = segmentName;
     }
 
-    public boolean isTenure() {
-        return tenure;
+    public String getValue() {
+        return value;
     }
 
-    public void setTenure(boolean tenure) {
-        this.tenure = tenure;
+    public void setValue(String value) {
+        this.value = value;
+    }
+
+    public Compliance[] getCompliance() {
+        return compliance;
+    }
+
+    public void setCompliance(Compliance[] compliance) {
+        this.compliance = compliance;
     }
 }

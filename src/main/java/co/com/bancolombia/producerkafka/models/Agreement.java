@@ -1,14 +1,14 @@
 package co.com.bancolombia.producerkafka.models;
 
 public class Agreement {
-    private Integer agreementId;
+    private String agreementId;
     private Service[] services;
 
-    public Integer getAgreementId() {
+    public String getAgreementId() {
         return agreementId;
     }
 
-    public void setAgreementId(Integer agreementId) {
+    public void setAgreementId(String agreementId) {
         this.agreementId = agreementId;
     }
 
@@ -20,3 +20,4 @@ public class Agreement {
         this.services = services;
     }
 }
+

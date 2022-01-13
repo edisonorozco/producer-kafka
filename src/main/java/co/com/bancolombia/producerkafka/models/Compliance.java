@@ -3,7 +3,7 @@ package co.com.bancolombia.producerkafka.models;
 public class Compliance {
     private String fromDate;
     private String toDate;
-    private double actualValue;
+    private String actualValue;
     private String complianceStatus;
 
     public String getFromDate() {
@@ -22,11 +22,11 @@ public class Compliance {
         this.toDate = toDate;
     }
 
-    public double getActualValue() {
+    public String getActualValue() {
         return actualValue;
     }
 
-    public void setActualValue(double actualValue) {
+    public void setActualValue(String actualValue) {
         this.actualValue = actualValue;
     }
 

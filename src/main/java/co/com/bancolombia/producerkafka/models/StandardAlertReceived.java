@@ -1,39 +1,66 @@
 package co.com.bancolombia.producerkafka.models;
 
 public class StandardAlertReceived {
-    private Integer clientID;
-    private String clientName;
-    private Integer documentNumber;
+
+    private String dealId;
+    private String dealStatus;
+    private String dealCompliantStatus;
+    private String customerid;
+    private String customerName;
+    private String documentNumber;
     private String documentType;
     private String customerSegment;
-    private String commercialName;
     private String dateOfEvaluation;
-    private String evaluationToDate;
-    private String evaluationFromDate;
-    private Agreement[] agreements;
-    private CrossSellingProduct[] crossSellingProducts;
+    private String evalutionFromDate;
+    private String evalutionToDate;
+    private String evaluationFrequency;
+    private CommitmentDetails commitmentDetails;
 
-    public Integer getClientID() {
-        return clientID;
+    public String getDealId() {
+        return dealId;
     }
 
-    public void setClientID(Integer clientID) {
-        this.clientID = clientID;
+    public void setDealId(String dealId) {
+        this.dealId = dealId;
     }
 
-    public String getClientName() {
-        return clientName;
+    public String getDealStatus() {
+        return dealStatus;
     }
 
-    public void setClientName(String clientName) {
-        this.clientName = clientName;
+    public void setDealStatus(String dealStatus) {
+        this.dealStatus = dealStatus;
     }
 
-    public Integer getDocumentNumber() {
+    public String getDealCompliantStatus() {
+        return dealCompliantStatus;
+    }
+
+    public void setDealCompliantStatus(String dealCompliantStatus) {
+        this.dealCompliantStatus = dealCompliantStatus;
+    }
+
+    public String getCustomerid() {
+        return customerid;
+    }
+
+    public void setCustomerid(String customerid) {
+        this.customerid = customerid;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public String getDocumentNumber() {
         return documentNumber;
     }
 
-    public void setDocumentNumber(Integer documentNumber) {
+    public void setDocumentNumber(String documentNumber) {
         this.documentNumber = documentNumber;
     }
 
@@ -53,14 +80,6 @@ public class StandardAlertReceived {
         this.customerSegment = customerSegment;
     }
 
-    public String getCommercialName() {
-        return commercialName;
-    }
-
-    public void setCommercialName(String commercialName) {
-        this.commercialName = commercialName;
-    }
-
     public String getDateOfEvaluation() {
         return dateOfEvaluation;
     }
@@ -69,35 +88,35 @@ public class StandardAlertReceived {
         this.dateOfEvaluation = dateOfEvaluation;
     }
 
-    public String getEvaluationToDate() {
-        return evaluationToDate;
+    public String getEvalutionFromDate() {
+        return evalutionFromDate;
     }
 
-    public void setEvaluationToDate(String evaluationToDate) {
-        this.evaluationToDate = evaluationToDate;
+    public void setEvalutionFromDate(String evalutionFromDate) {
+        this.evalutionFromDate = evalutionFromDate;
     }
 
-    public String getEvaluationFromDate() {
-        return evaluationFromDate;
+    public String getEvalutionToDate() {
+        return evalutionToDate;
     }
 
-    public void setEvaluationFromDate(String evaluationFromDate) {
-        this.evaluationFromDate = evaluationFromDate;
+    public void setEvalutionToDate(String evalutionToDate) {
+        this.evalutionToDate = evalutionToDate;
     }
 
-    public Agreement[] getAgreements() {
-        return agreements;
+    public String getEvaluationFrequency() {
+        return evaluationFrequency;
     }
 
-    public void setAgreements(Agreement[] agreements) {
-        this.agreements = agreements;
+    public void setEvaluationFrequency(String evaluationFrequency) {
+        this.evaluationFrequency = evaluationFrequency;
     }
 
-    public CrossSellingProduct[] getCrossSellingProducts() {
-        return crossSellingProducts;
+    public CommitmentDetails getCommitmentDetails() {
+        return commitmentDetails;
     }
 
-    public void setCrossSellingProducts(CrossSellingProduct[] crossSellingProducts) {
-        this.crossSellingProducts = crossSellingProducts;
+    public void setCommitmentDetails(CommitmentDetails commitmentDetails) {
+        this.commitmentDetails = commitmentDetails;
     }
 }
