@@ -4,8 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AverageBalance {
     private double value;
-    @JsonProperty("compliance")
-    private Compliance[] compliances;
+    private Compliance[] compliance;
 
     public double getValue() {
         return value;
@@ -16,10 +15,10 @@ public class AverageBalance {
     }
 
     public Compliance[] getCompliances() {
-        return compliances;
+        return compliance;
     }
 
     public void setCompliances(Compliance[] compliances) {
-        this.compliances = compliances;
+        this.compliance = compliances;
     }
 }
