@@ -3,7 +3,7 @@ package co.com.bancolombia.producerkafka.models;
 public class SegmentLevel {
     private String segmentName;
     private String value;
-    private  Compliance[] compliance;
+    private Compliance[] compliance;
 
     public String getSegmentName() {
         return segmentName;

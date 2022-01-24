@@ -14,11 +14,11 @@ public class NumOfTransaction {
         this.value = value;
     }
 
-    public Compliance[] getCompliances() {
+    public Compliance[] getCompliance() {
         return compliance;
     }
 
-    public void setCompliances(Compliance[] compliances) {
-        this.compliance = compliances;
+    public void setCompliance(Compliance[] compliance) {
+        this.compliance = compliance;
     }
 }
